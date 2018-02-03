@@ -8,7 +8,24 @@ class Content extends Component {
     constructor(){
         super();
         this.state = {
-            projects: []
+            projects: [
+                {
+                    name:"Loading projects...",
+                    archived: false,
+                    created_at: new Date().toString(),
+                    updated_at: new Date().toString(),
+                    description: "This might take a second...",
+                    language: "English"
+                },
+                {
+                    name:"Loading projects...",
+                    archived: true,
+                    created_at: new Date().toString(),
+                    updated_at: new Date().toString(),
+                    description: "This might take a second...",
+                    language: "English"
+                }
+            ]
         }
     }
     componentWillMount(){
