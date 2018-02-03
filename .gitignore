@@ -17,3 +17,4 @@ githubwebsite.code-workspace# See https://help.github.com/ignore-files/ for more
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+githubwebsite.code-workspace
