@@ -1,3 +1,10 @@
 body {
-    
+    font-family: Raleway;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    padding: 0px;
 }
