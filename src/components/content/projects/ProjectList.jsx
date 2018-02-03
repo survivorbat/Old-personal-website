@@ -24,7 +24,7 @@ class Content extends Component {
     }
     render() {
         return (
-            <ul className="list-group projectlist">
+            <ul className="list-group projectlist row">
                 {this.state.projects.map((project, key) => <Project project={project} key={key}/>)}
             </ul>
         );

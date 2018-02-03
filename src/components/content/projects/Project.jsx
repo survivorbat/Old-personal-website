@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Content extends Component {
   render() {
     return (
-      <li className="list-group-item">
+      <li className="list-group-item col-md-3">
         
       </li>
     );
