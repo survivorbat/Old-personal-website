@@ -15,7 +15,6 @@ class Content extends Component {
         const self = this;
         axios.get('https://api.github.com/users/survivorbat/repos')
             .then(function (response) {
-                console.log(response.data);
                 self.setState({projects: response.data});
             })
             .catch(function (error) {
@@ -24,9 +23,16 @@ class Content extends Component {
     }
     render() {
         return (
-            <ul className="list-group projectlist row">
-                {this.state.projects.map((project, key) => <Project project={project} key={key}/>)}
-            </ul>
+            <section>
+                <h4>Active projects:</h4>
+                <div className="card-deck">
+                    {this.state.projects.filter(project => project.archived === false).sort((a,b) => {return new Date(a.updated_at)>new Date(b.updated_at) ? -1 : a<b ? 1 : 0;}).map((project, key) => <Project project={project} key={key}/>)}
+                </div>
+                <h4>Archived / old projects:</h4>
+                <div className="card-deck">
+                    {this.state.projects.filter(project => project.archived === true).sort((a,b) => {return new Date(a.updated_at)>new Date(b.updated_at) ? -1 : a<b ? 1 : 0;}).map((project, key) => <Project project={project} key={key}/>)}
+                </div>
+            </section>
         );
     }
 }
