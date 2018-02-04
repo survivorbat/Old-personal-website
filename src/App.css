@@ -4,7 +4,7 @@ body {
 }
 
 .container-fluid {
-    background-color: whitesmoke;
+    background-color: #FEFEFE;
     min-height: 100vh;
     padding: 0px;
 }
