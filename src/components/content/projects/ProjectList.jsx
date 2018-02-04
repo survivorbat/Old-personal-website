@@ -14,16 +14,14 @@ class Content extends Component {
                     archived: false,
                     created_at: new Date().toString(),
                     updated_at: new Date().toString(),
-                    description: "This might take a second...",
-                    language: "English"
+                    description: "This might take a second..."
                 },
                 {
                     name:"Loading projects...",
                     archived: true,
                     created_at: new Date().toString(),
                     updated_at: new Date().toString(),
-                    description: "This might take a second...",
-                    language: "English"
+                    description: "This might take a second..."
                 }
             ]
         }
