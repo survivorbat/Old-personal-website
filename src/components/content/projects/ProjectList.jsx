@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import { getProjects } from '../../../actions/projectsActions';
 
+
 class ProjectList extends Component {
     constructor(){
         super();
@@ -19,11 +20,11 @@ class ProjectList extends Component {
             <section>
                 <h4>Current projects:</h4>
                 <div className="card-deck">
-                    {projects.filter(project => project.archived === false).map((project, key) => <Project project={project} key={key}/>)}
+                    {projects.filter(project => project.archived === false).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => <Project project={project} key={key}/>)}
                 </div>
                 <h4>Archived projects:</h4>
                 <div className="card-deck">
-                    {projects.filter(project => project.archived === true).map((project, key) => <Project project={project} key={key}/>)}
+                    {projects.filter(project => project.archived === true).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => <Project project={project} key={key}/>)}
                 </div>
             </section>
         );
