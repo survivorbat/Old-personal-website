@@ -11,7 +11,7 @@ class Content extends Component {
             <p className="card-text text-muted"><small>Last updated: {project.updated_at.substring(0,10)}</small></p>
             <p className="card-text">{project.description}</p>
             <p className="card-text"><small>Main language: {project.language}</small></p>
-            {project.homepage!==null && project.homepage!=="" ? <a href={project.homepage}><button className="btn btn-primary btn-block"><strong>Demo</strong></button></a> : <div/>}
+            {project.homepage!==null && project.homepage!=="" ? <a href={project.homepage}><button className="btn btn-primary"><strong>Demo</strong></button></a> : <div/>}
           </div>
           <div className="card-footer">
             <small className="text-muted">Created: {project.created_at.substring(0,10)}</small>
