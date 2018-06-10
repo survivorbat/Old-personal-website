@@ -28,12 +28,12 @@ class Content extends Component {
                   Nowadays you'll find me working with frameworks like ReactJS, Slim, Redux, Bootstrap and Angular which I use extensively to build my apps faster than I ever could.
                 </p>
                 <p>
-                  (More coming soon...)
+                  At the moment my dream is to create a game like Agar.io or Moomoo.io and build a fanbase around it.
                 </p>
             </Modal>
             <Modal trigger={<button className="btn-bottom">Technologies</button>}>
               <h3>Technologies</h3>
-              <p>(Coming soon...)</p>
+              <p>As mentioned I have worked with a variety of programming languages and technologies. My favourite languages are Javascript and PHP. My favourite frameworks are ReactJS bundled with Redux and the Slim framework in PHP.</p>
               <p>Currently the technologies and languages used in my public projects are:</p>
               {this.props.projects.technologies.map((item, key) => <Chip close={false} key={key}>{item}</Chip>)}
             </Modal>
