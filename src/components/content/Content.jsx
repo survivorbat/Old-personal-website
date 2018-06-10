@@ -11,7 +11,7 @@ class Content extends Component {
         <div className="content-buttons">
           <div className="valign-wrapper" style={{justifyContent: "space-around", flexDirection: "row"}}>
             <Modal trigger={<button className="btn-bottom">About me</button>}>
-                <h2>About me</h2>
+                <h3>About me</h3>
                 <p>
                   Hello there! I am Maarten, a junior software developer that enjoys trying out new technologies and frameworks a lot. 
                 </p>
@@ -32,7 +32,7 @@ class Content extends Component {
                 </p>
             </Modal>
             <Modal trigger={<button className="btn-bottom">Technologies</button>}>
-              <h2>Technologies</h2>
+              <h3>Technologies</h3>
               <p>(Coming soon...)</p>
               <p>Currently the technologies and languages used in my public projects are:</p>
               {this.props.projects.technologies.map((item, key) => <Chip close={false} key={key}>{item}</Chip>)}
@@ -41,7 +41,7 @@ class Content extends Component {
               <ProjectList/>
             </Modal>
             <Modal trigger={<button className="btn-bottom">Contact</button>}>
-                <h2>Contact</h2>
+                <h3>Contact</h3>
                 <p>You can find me on <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/maarten-van-der-heijden-webdev">Linkedin</a>, view my repositories at <a rel="noopener noreferrer" target="_blank" href="https://github.com/survivorbat">Github</a> and you can also send me an e-mail me through <a href="mailto:djbatcat@gmail.com">djbatcat@gmail.com</a></p>
             </Modal>
           </div>
