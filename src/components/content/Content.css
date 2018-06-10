@@ -1,7 +1,34 @@
-.row {
-    margin-top:20px;
+.btn-bottom {
+    background-color: rgba(0,0,0,0);
+    border-style: none;
+    color: white;
+    z-index: 2;
+    box-sizing: border-box;
+    font-size: 1.5em;
 }
 
-.btn {
-    cursor: pointer;
+.btn-bottom:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.btn-bottom:focus {
+    color: black;
+    background-color: ghostwhite;
+}
+
+.btn-bottom:selected {
+    background-color: rgba(0,0,0,0);
+}
+
+.content-buttons {
+    position: fixed;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .content-buttons {
+        font-size: 0.675em;
+    }
 }
