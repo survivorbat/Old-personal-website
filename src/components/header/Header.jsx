@@ -6,7 +6,7 @@ import Particles from 'react-particles-js'
 const params = {
   particles: {
     number: {
-      value: 200,
+      value: 80,
       density: {
         value_area: 2000
       },
