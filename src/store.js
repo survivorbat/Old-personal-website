@@ -1,8 +1,8 @@
-import {applyMiddleware, createStore, compose} from 'redux'
+import {applyMiddleware, createStore, compose} from "redux"
 
-import promise from 'redux-promise-middleware'
+import promise from "redux-promise-middleware"
 
-import reducer from './reducers'
+import reducer from "./reducers"
 import Storage from "redux-state-save"
  
 const storage = new Storage()
