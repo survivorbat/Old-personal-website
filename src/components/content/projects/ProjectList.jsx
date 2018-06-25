@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import Project from './Project';
-import autoBind from 'react-autobind';
-import {connect} from 'react-redux';
-import {Row, Col} from 'react-materialize'
-import { getProjects } from '../../../actions/projectsActions';
+import React, { Component } from "react"
+import Project from "./Project"
+import autoBind from "react-autobind"
+import {connect} from "react-redux"
+import {Row, Col} from "react-materialize"
+import { getProjects } from "../../../actions/projectsActions"
 
 
 class ProjectList extends Component {
     constructor(){
-        super();
-        autoBind(this);
+        super()
+        autoBind(this)
     }
     componentWillMount(){
-        if(this.props.projects.projects.length < 1) this.props.dispatch(getProjects());
+        if(this.props.projects.projects.length < 1) {
+            this.props.dispatch(getProjects())
+        }
     }
     render() {
-        const projects = this.props.projects.projects;
+        const projects = this.props.projects.projects
         return (
             <section>
                 <Row>
@@ -24,7 +26,7 @@ class ProjectList extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    {projects.filter(project => project.archived === false).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
+                    {projects.filter((project) => project.archived === false).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
                         <Col m={6} l={4} s={12} key={key}>
                             <Project project={project}/>
                         </Col>
@@ -36,17 +38,17 @@ class ProjectList extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    {projects.filter(project => project.archived === true).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
+                    {projects.filter((project) => project.archived === true).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
                         <Col m={6} l={4} s={12} key={key}>
                             <Project project={project}/>
                         </Col>
                     )}
                 </Row>
             </section>
-        );
+        )
     }
 }
 function mapStateToProps(store) {
-    return store;
+    return store
 }
-export default connect(mapStateToProps)(ProjectList);
+export default connect(mapStateToProps)(ProjectList)

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from "react"
+import "./App.css"
 
-import Header from './components/header/Header'
-import Content from './components/content/Content'
+import Header from "./components/header/Header"
+import Content from "./components/content/Content"
 
 class App extends Component {
   render() {

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './Content.css';
-import { Modal, Container, Chip } from 'react-materialize'
-import {connect} from 'react-redux';
-import ProjectList from './projects/ProjectList';
+import React, { Component } from "react"
+import "./Content.css"
+import { Modal, Container, Chip } from "react-materialize"
+import {connect} from "react-redux"
+import ProjectList from "./projects/ProjectList"
 
 class Content extends Component {
   render() {
@@ -47,11 +47,11 @@ class Content extends Component {
           </div>
         </div>
       </Container>
-    );
+    )
   }
 }
 
 function mapStateToProps(store) {
-  return store;
+  return store
 }
-export default connect(mapStateToProps)(Content);
+export default connect(mapStateToProps)(Content)

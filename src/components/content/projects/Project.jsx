@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 
 class Content extends Component {
   render() {
-    const project = this.props.project;
+    const project = this.props.project
     return (
       <div className="card" style={{marginTop: "10px", marginBottom:"10px"}}>
         <div className="card-content">
@@ -13,8 +13,8 @@ class Content extends Component {
           {project.homepage!==null && project.homepage!=="" ? <a href={project.homepage}>Demo</a> :null}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Content;
+export default Content

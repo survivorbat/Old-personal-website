@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import './Header.css'
-import { Row, Col, Container } from 'react-materialize'
-import Particles from 'react-particles-js'
+import React, { Component } from "react"
+import "./Header.css"
+import { Row, Col, Container } from "react-materialize"
+import Particles from "react-particles-js"
 
 const params = {
   particles: {
