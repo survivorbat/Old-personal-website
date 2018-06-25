@@ -25,25 +25,17 @@ class ProjectList extends Component {
                         <h4>Active projects:</h4>
                     </Col>
                 </Row>
-                <Row>
                     {projects.filter((project) => project.archived === false).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
-                        <Col m={6} l={4} s={12} key={key}>
-                            <Project project={project}/>
-                        </Col>
+                        <Project project={project} key={key}/>
                     )}
-                </Row>
                 <Row>
                     <Col m={12}>
                         <h4>Archived projects:</h4>
                     </Col>
                 </Row>
-                <Row>
-                    {projects.filter((project) => project.archived === true).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
-                        <Col m={6} l={4} s={12} key={key}>
-                            <Project project={project}/>
-                        </Col>
-                    )}
-                </Row>
+                {projects.filter((project) => project.archived === true).sort((a,b) => {return new Date(a.updated_at)<new Date(b.updated_at)}).map((project, key) => 
+                    <Project project={project} key={key}/>
+                )}
             </section>
         )
     }

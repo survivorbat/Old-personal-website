@@ -8,12 +8,11 @@
 }
 
 .btn-bottom:hover {
-    background-color: rgba(255,255,255,0.5);
+    font-weight: bold;
 }
 
 .btn-bottom:focus {
-    color: black;
-    background-color: ghostwhite;
+    background-color: initial;
 }
 
 .btn-bottom:selected {
@@ -32,4 +31,12 @@
     .content-buttons {
         font-size: 0.675em;
     }
+}
+
+.btn:hover {
+    background-color: rgba(0,0,0,0);
+}
+
+.card-title, .text-primary, a, a:visited, a:link {
+    color: #005dff;
 }

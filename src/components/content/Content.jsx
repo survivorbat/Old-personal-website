@@ -15,18 +15,24 @@ class Content extends Component {
                 <p>
                   Hello there! I am Maarten, a junior software developer that enjoys trying out new technologies and frameworks a lot. 
                 </p>
+                <br/>
                 <p>
                   I have been into webdevelopment since the age of eleven, after school I'd type away at my laptop in the living room assembling websites from scratch.
                   During these days I only knew HTML and a little bit of CSS so obviously they weren't pretty or nice to look at.
                   But it worked! And that was extremely exciting for twelve year-old me.
+                </p>
+                <br/>
+                <p>
                   I also taught myself a little bit of PHP and MySQL in order to generate dynamic web pages and use forms.
                   Obviously I had no idea what MVC or MVVM even meant and I usually just dropped all my code in one index.php file which resulted in non-existent maintainability, but that didn't matter since I was still learning.
                   While attending highschool I figured out how to work with CSS properly and I finally found out how to work with a div element on a webpage and started making more advanced applications.
                 </p>
+                <br/>
                 <p>
                   In 2017 I began studying Javascript because I wanted to make my webpages more dynamic, I also discovered Ajax and I started to understand the beauty of asynchronously loading in data from an API.
                   Nowadays you'll find me working with frameworks like ReactJS, Slim, Redux, Bootstrap and Angular which I use extensively to build my apps faster than I ever could.
                 </p>
+                <br/>
                 <p>
                   At the moment my dream is to create a game like Agar.io or Moomoo.io and build a fanbase around it.
                 </p>
@@ -34,6 +40,7 @@ class Content extends Component {
             <Modal trigger={<button className="btn-bottom">Technologies</button>}>
               <h3>Technologies</h3>
               <p>As mentioned I have worked with a variety of programming languages and technologies. My favourite languages are Javascript and PHP. My favourite frameworks are ReactJS bundled with Redux and the Slim framework in PHP.</p>
+              <br/>
               <p>Currently the technologies and languages used in my public projects are:</p>
               {this.props.projects.technologies.map((item, key) => <Chip close={false} key={key}>{item}</Chip>)}
             </Modal>
