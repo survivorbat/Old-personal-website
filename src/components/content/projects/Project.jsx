@@ -1,20 +1,12 @@
-import React, { Component } from "react"
+import React from "react"
 
-class Content extends Component {
-  render() {
-    const project = this.props.project
-    return (
-      <div className="card">
-        <div className="card-content">
-          <h4 className="card-title font-weight-bold"><a href={project.svn_url}>{project.name.replace(/-/g," ")}</a></h4>
-          <small>Main language: {project.language}</small>
-          <p className="card-text">{project.description}</p>
-          <br/>
-          {project.homepage!==null && project.homepage!=="" ? <a href={project.homepage}>Demo</a> :null}
-        </div>
-      </div>
-    )
-  }
-}
-
-export default Content
+export default ({project}) =>
+  <div className="card small">
+    <div className="card-content">
+      <h4 className="card-title font-weight-bold" style={{whiteSpace: "normal"}}><a href={project.svn_url}>{project.name.replace(/-/g," ")}</a></h4>
+      <small>Main language: {project.language}</small>
+      <p className="card-text" style={{maxHeight: "70%"}}>{project.description}</p>
+      <br/>
+      {project.homepage!==null && project.homepage!=="" ? <a href={project.homepage}>Demo</a> :null}
+    </div>
+  </div>

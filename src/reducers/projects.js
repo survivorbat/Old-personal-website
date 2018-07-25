@@ -2,13 +2,14 @@ function onlyUnique(value, index, self) {
     return self.indexOf(value) === index && value !== null
 }
 
-export default function reducer(state = {
+const initialState = {
     projects: [],
     technologies: [],
     fetching: false,
-    fetched: false,
     error: null
-}, action){
+}
+
+export default function reducer(state = initialState, action){
     switch(action.type){
         case "FETCH_PROJECTS_PENDING": {
             return {...state, fetching: true}
@@ -17,7 +18,7 @@ export default function reducer(state = {
             return {...state, fetching: false, error: action.payload}
         }
         case "FETCH_PROJECTS_FULFILLED": {
-            return {...state, fetching: false, fetched: true, projects: action.payload.data, technologies: action.payload.data.map((project) => project.language).filter(onlyUnique)}
+            return {...state, fetching: false, projects: action.payload.data, technologies: action.payload.data.map((project) => project.language).filter(onlyUnique)}
         }
         default: {
             return state
