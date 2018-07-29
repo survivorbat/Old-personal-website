@@ -38,7 +38,7 @@ const Content = ({projects, getProjects}) =>
         </Modal>
         <Modal trigger={<button className="btn-bottom">Technologies</button>}>
           <h3>Technologies</h3>
-          <p>As mentioned I have worked with a variety of programming languages and technologies. My favourite languages are Javascript and PHP. My favourite frameworks are ReactJS bundled with Redux and the Slim framework in PHP.</p>
+          <p>As mentioned I have worked with a variety of programming languages and technologies. My favourite and most used languages are Javascript and PHP. My favourite frameworks are currently ReactJS bundled with Redux and the Slim framework in PHP, however I'm slowly switching to the Symfony framework.</p>
           <br/>
           <p>Currently the technologies and languages used in my public projects are:</p>
           {projects.technologies.map((item, key) => <Chip close={false} key={key}>{item}</Chip>)}
@@ -48,7 +48,7 @@ const Content = ({projects, getProjects}) =>
         </Modal>
         <Modal trigger={<button className="btn-bottom">Contact</button>}>
             <h3>Contact</h3>
-            <p>You can find me on <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/maarten-van-der-heijden-webdev">Linkedin</a>, view my repositories at <a rel="noopener noreferrer" target="_blank" href="https://github.com/survivorbat">Github</a> and you can also send me an e-mail me through <a href="mailto:djbatcat@gmail.com">djbatcat@gmail.com</a></p>
+            <p>You can find me on <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/maarten-van-der-heijden-webdev">Linkedin</a>, view my repositories at <a rel="noopener noreferrer" target="_blank" href="https://github.com/survivorbat">Github</a> and you can also send me an e-mail me at <a href="mailto:djbatcat@gmail.com">djbatcat@gmail.com</a></p>
         </Modal>
       </div>
     </div>
