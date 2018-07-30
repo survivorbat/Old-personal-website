@@ -9,7 +9,7 @@ const Content = ({projects, getProjects}) =>
   <Container>
     <div className="content-buttons">
       <div className="valign-wrapper" style={{justifyContent: "space-around", flexDirection: "row"}}>
-        <Modal trigger={<button className="btn-bottom">About me</button>}>
+        <Modal trigger={<button className="btn-bottom noselect">About me</button>}>
             <h3>About me</h3>
             <p>
               Hello there! I am Maarten, a junior software developer that enjoys trying out new technologies and frameworks a lot. 
@@ -36,17 +36,17 @@ const Content = ({projects, getProjects}) =>
               At the moment my dream is to create a game like Agar.io or Moomoo.io and build a fanbase around it.
             </p>
         </Modal>
-        <Modal trigger={<button className="btn-bottom">Technologies</button>}>
+        <Modal trigger={<button className="btn-bottom noselect">Technologies</button>}>
           <h3>Technologies</h3>
           <p>As mentioned I have worked with a variety of programming languages and technologies. My favourite and most used languages are Javascript and PHP. My favourite frameworks are currently ReactJS bundled with Redux and the Slim framework in PHP, however I'm slowly switching to the Symfony framework.</p>
           <br/>
           <p>Currently the technologies and languages used in my public projects are:</p>
           {projects.technologies.map((item, key) => <Chip close={false} key={key}>{item}</Chip>)}
         </Modal>
-        <Modal trigger={<button className="btn-bottom">Projects</button>}>
+        <Modal trigger={<button className="btn-bottom noselect">Projects</button>}>
           <ProjectList projects={projects.projects} getProjects={getProjects}/>
         </Modal>
-        <Modal trigger={<button className="btn-bottom">Contact</button>}>
+        <Modal trigger={<button className="btn-bottom noselect">Contact</button>}>
             <h3>Contact</h3>
             <p>You can find me on <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/maarten-van-der-heijden-webdev">Linkedin</a>, view my repositories at <a rel="noopener noreferrer" target="_blank" href="https://github.com/survivorbat">Github</a> and you can also send me an e-mail me at <a href="mailto:djbatcat@gmail.com">djbatcat@gmail.com</a></p>
         </Modal>

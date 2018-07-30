@@ -73,7 +73,7 @@ export default () =>
         <div className="valign-wrapper center" style={{height:"100vh", width:"100%"}}>
           <Row style={{width: "100%"}}>
             <Col s={12} m={12} l={12}>
-                <h1>Maarten van der Heijden</h1>
+                <h1 className="noselect">Maarten van der Heijden</h1>
             </Col>
           </Row>
         </div>
