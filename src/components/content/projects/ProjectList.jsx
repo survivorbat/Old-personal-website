@@ -4,9 +4,7 @@ import {Row, Col} from "react-materialize"
 
 export default class ProjectList extends Component {
     componentWillMount(){
-        if(this.props.projects.length < 1) {
-            this.props.getProjects()
-        }
+        this.props.getProjects()
     }
     render() {
         const projects = this.props.projects
